@@ -29,19 +29,19 @@ func add(num1 float64, num2 float64) float64 {
 	return num1 + num2
 }
 
-func calc(symbol string, num1 float64, num2 float64) float64 {
+func calc(symbol string, num1 float64, num2 float64) {
 	
 	switch symbol {
 	case "+":
-		return add(num1,num2)
+		add(num1,num2)
 	case "-":
-		return substruct(num1,num2)
+		substruct(num1,num2)
 	case "*":
-		return multiply(num1,num2)
+		multiply(num1,num2)
 	case "/":
-		return divide(num1,num2)
+		divide(num1,num2)
 	default:
-		return 0
+		fmt.Println("正しい記号を入力してください")
 	}
 }
 
